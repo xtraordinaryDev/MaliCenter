@@ -231,7 +231,18 @@ p {
     height: auto;
     z-index: -2;
     transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
     object-fit: cover;
+    -webkit-object-fit: cover;
+}
+/* iOS: prevent video from overflowing and ensure inline playback */
+@supports (-webkit-touch-callout: none) {
+    .hero-video {
+        min-height: 100vh;
+        min-width: 100vw;
+        height: 100%;
+        width: 100%;
+    }
 }
 
 .hero-overlay {

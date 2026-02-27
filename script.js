@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // iOS: ensure hero video plays (autoplay can be blocked until we call play())
+    const heroVideo = document.querySelector('.hero-video');
+    if (heroVideo) {
+        heroVideo.play().catch(() => {});
+    }
+
     // Mobile nav toggle
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
