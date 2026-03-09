@@ -62,21 +62,49 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
-    // Elegant element-level parallax effect
-    const parallaxImgs = document.querySelectorAll('.parallax-img');
-    if (parallaxImgs.length > 0) {
-        window.addEventListener('scroll', () => {
-            parallaxImgs.forEach(img => {
-                const speed = parseFloat(img.getAttribute('data-speed'));
-                const rect = img.parentElement.getBoundingClientRect();
+    // Parallax: images and full-section background layers
+    const parallaxElements = document.querySelectorAll('.parallax-img, .parallax-card');
 
-                // Calculate position relative to viewport center
-                const elementCenter = rect.top + (rect.height / 2);
+    if (parallaxElements.length > 0) {
+        // Pre-mark elements for GPU compositing
+        parallaxElements.forEach(el => {
+            const speed = parseFloat(el.getAttribute('data-speed'));
+            if (!Number.isNaN(speed)) el.style.willChange = 'transform';
+        });
+
+        let rafPending = false;
+
+        function updateParallax() {
+            rafPending = false;
+            parallaxElements.forEach(el => {
+                const speed = parseFloat(el.getAttribute('data-speed'));
+                if (Number.isNaN(speed)) return;
+
+                // For full-section bg layers use their own rect; for floating imgs use parent rect
+                const rect = el.classList.contains('parallax-img')
+                    ? el.parentElement.getBoundingClientRect()
+                    : el.getBoundingClientRect();
+
+                const elementCenter = rect.top + rect.height / 2;
                 const viewportCenter = window.innerHeight / 2;
                 const offset = (viewportCenter - elementCenter) * speed;
 
-                img.style.transform = `translateY(${offset}px)`;
+                el.style.transform = `translateY(${offset}px)`;
             });
-        });
+        }
+
+        function requestUpdate() {
+            if (!rafPending) {
+                rafPending = true;
+                requestAnimationFrame(updateParallax);
+            }
+        }
+
+        // scroll fires on desktop; touchmove fires during finger movement on iOS
+        window.addEventListener('scroll', requestUpdate, { passive: true });
+        window.addEventListener('touchmove', requestUpdate, { passive: true });
+
+        // Run once on load so initial position is correct
+        updateParallax();
     }
 });

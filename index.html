@@ -12,6 +12,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap"
         rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/MC Symbol PNG Files/MC Logo-01.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/MC Symbol PNG Files/MC Logo-01.png">
+    <link rel="apple-touch-icon" href="assets/images/MC Symbol PNG Files/MC Logo-01.png">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -20,16 +23,22 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <h1><span class="mali">MALI</span> <span class="center">CENTER</span></h1>
-                <p class="tagline"><span class="culture">CULTURE</span> &bull; <span class="community">COMMUNITY</span>
-                    &bull; <span class="connected">CONNECTED</span></p>
+                <a href="#mission" class="logo-lockup">
+                    <img src="assets/images/MC Logo Files/PNG Files/MALI CENTER LOGO-03.png" alt="" class="logo-img" aria-hidden="true">
+                    <div>
+                        <h1><span class="mali">MALI</span> <span class="center">CENTER</span></h1>
+                        <p class="tagline"><span class="culture">CULTURE</span> &bull; <span class="community">COMMUNITY</span> &bull; <span class="connected">CONNECTED</span></p>
+                    </div>
+                </a>
             </div>
             <ul class="nav-links">
-                <li><a href="#mission">Mission</a></li>
+                <li><a href="#mission-vision">Mission</a></li>
                 <li><a href="#about">Who We Are</a></li>
                 <li><a href="#principles">Principles</a></li>
                 <li><a href="#values">Values</a></li>
                 <li><a href="#pillars">5 Pillars</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="https://fitcommchallenge.com/index.html" target="_blank" rel="noopener noreferrer" class="nav-fitcomm">F.I.T.-COMM Challenge</a></li>
             </ul>
             <button class="nav-toggle" aria-label="Toggle menu">
                 <span></span>
@@ -65,25 +74,48 @@
         </div>
     </header>
 
+    <!-- Mission & Vision Section -->
+    <section class="section mission-vision-section" id="mission-vision">
+        <div class="parallax-card mv-bg-layer" data-speed="0.25">
+            <img src="assets/images/The Mali Center.jpeg" alt="" aria-hidden="true" class="mv-bg-desktop">
+            <img src="assets/images/MaliCenter-02491.jpeg" alt="" aria-hidden="true" class="mv-bg-mobile">
+            <div class="mv-bg-overlay"></div>
+        </div>
+        <div class="container mv-content">
+            <h2 class="section-title text-center reveal" style="text-align:center;">TMC Mission &amp; Vision</h2>
+            <div class="mission-vision-grid">
+                <div class="mv-card reveal-up">
+                    <div class="mv-label mv-label-red">Mission</div>
+                    <p class="mv-statement">The Mali Center exists to foster economic prosperity, holistic wellness, and inclusive opportunity for historically underrepresented communities.</p>
+                </div>
+                <div class="mv-card reveal-up" style="transition-delay:0.15s;">
+                    <div class="mv-label mv-label-green">Vision</div>
+                    <p class="mv-statement">The Mali Center envisions thriving, self-sustaining communities where culturally rooted entrepreneurship, wellness and collaboration drive generational wealth, economic equity, and collective well-being.</p>
+                    <p class="mv-aspire">We aspire to be a nationally recognized model for inclusive community ecosystems that uplift diverse leaders, strengthen local economies and redefine how shared spaces cultivate opportunity and belonging.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- We Believe Section -->
     <section class="section accent-bg" id="believe" style="overflow: hidden;">
         <div class="container">
             <div class="split-layout">
-                <div class="split-content reveal-left" style="z-index: 2; align-self: center;">
-                    <h2 class="section-title">We Believe</h2>
-                    <p class="lead-text" style="text-align: left; margin: 0; font-size: 1.35rem;">
-                        At the Mali Center, we know that all people have immeasurable value and can reach their
-                        potential with
-                        coaching & development, mentorship and inspiration to fuel their growth. All individuals deserve
-                        equitable resources and investment.
-                    </p>
+                <div class="parallax-card" data-speed="-0.04" style="z-index: 2; align-self: center;">
+                    <div class="split-content reveal-left">
+                        <h2 class="section-title">We Believe</h2>
+                        <p class="lead-text" style="text-align: left; margin: 0; font-size: 1.35rem;">
+                            At the Mali Center, we know that all people have immeasurable value and can reach their
+                            potential with
+                            coaching & development, mentorship and inspiration to fuel their growth. All individuals deserve
+                            equitable resources and investment.
+                        </p>
+                    </div>
                 </div>
-                <!-- Parallax Attached Images -->
-                <div class="split-image reveal-right" style="position: relative; min-height: 450px;">
-                    <img src="assets/images/24.jpg" alt="Mentorship" class="parallax-img" data-speed="0.1"
-                        style="position: absolute; top: 10%; right: 30%; width: 70%; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.6); object-fit: cover; z-index: 1;">
-                    <img src="assets/images/3GB.jpg" alt="Community Empowerment" class="parallax-img" data-speed="-0.15"
-                        style="position: absolute; bottom: 10%; right: 0; width: 60%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.6); border: 2px solid var(--clr-green); object-fit: cover; z-index: 2;">
+                <!-- Stacked Images -->
+                <div class="split-image reveal-right believe-img-stack">
+                    <img src="assets/images/24.jpg" alt="Mentorship" class="parallax-img believe-img-top" data-speed="0.08">
+                    <img src="assets/images/Thrive_Event_0-25.jpeg" alt="Community Empowerment" class="parallax-img believe-img-bottom" data-speed="-0.08">
                 </div>
             </div>
         </div>
@@ -118,12 +150,18 @@
     </section>
 
     <!-- Founding Principles & Values Section -->
-    <section class="section pattern-bg" id="principles">
-        <div class="container">
+    <section class="section principles-bg-section" id="principles">
+        <div class="parallax-card principles-bg-layer" data-speed="0.3">
+            <img src="assets/images/4GB.jpg" alt="" role="presentation" aria-hidden="true" class="principles-bg-desktop">
+            <img src="assets/images/Thrive_Event_0-169.jpeg" alt="" role="presentation" aria-hidden="true" class="principles-bg-mobile">
+            <div class="principles-bg-overlay"></div>
+        </div>
+        <div class="container principles-content">
             <div class="grid-2">
                 <!-- Principles -->
-                <div class="card glass-card reveal-up">
-                    <h2 class="card-title">Founding Principles</h2>
+                <div class="parallax-card" data-speed="-0.12">
+                    <div class="card glass-card reveal-up">
+                        <h2 class="card-title">Founding Principles</h2>
                     <ul class="principles-list">
                         <li>
                             <strong class="highlight-green">Sankofa</strong>
@@ -134,10 +172,12 @@
                             <p>“Humanity to others”. “I am what I am because of who we all are”.</p>
                         </li>
                     </ul>
+                    </div>
                 </div>
                 <!-- Values -->
-                <div class="card glass-card reveal-up" style="transition-delay: 0.2s;" id="values">
-                    <h2 class="card-title">Our Values</h2>
+                <div class="parallax-card" data-speed="0.12">
+                    <div class="card glass-card reveal-up" style="transition-delay: 0.2s;" id="values">
+                        <h2 class="card-title">Our Values</h2>
                     <div class="value-item">
                         <h4 class="highlight-green">Culture</h4>
                         <p>We teach each other, listen more than we speak, and share ideas. All boats rise when we work
@@ -152,6 +192,7 @@
                         <h4 class="highlight-red">Connected</h4>
                         <p>Rooted in our ability to thrive is the connection of physical health, mental wellbeing,
                             economic stability, and a spiritual foundation.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -165,30 +206,70 @@
             <p class="subtitle reveal">Holistic wellbeing as the foundation for growth and prosperity.</p>
 
             <div class="pillars-grid">
-                <div class="pillar-card reveal-up shadow-hover">
-                    <div class="icon red-glow">🏃</div>
-                    <h3>Physical</h3>
-                    <p>Functionally mobile, free of chronic disease, able to complete daily tasks with ease.</p>
+                <!-- Physical -->
+                <div class="pillar-card reveal-up" style="transition-delay: 0s;">
+                    <div class="pillar-card-image">
+                        <img src="assets/images/Sunrise Banks.jpeg" alt="Physical health">
+                        <div class="pillar-card-overlay"></div>
+                        <span class="pillar-card-badge pillar-red">Physical</span>
+                    </div>
+                    <div class="pillar-card-body">
+                        <div class="pillar-accent pillar-accent-red"></div>
+                        <h3>Physical</h3>
+                        <p>Functionally mobile, free of chronic disease, able to complete daily tasks with ease.</p>
+                    </div>
                 </div>
-                <div class="pillar-card reveal-up shadow-hover" style="transition-delay: 0.1s;">
-                    <div class="icon green-glow">📈</div>
-                    <h3>Financial</h3>
-                    <p>Personal economic stability, ability to save, and path to generational wealth.</p>
+                <!-- Financial -->
+                <div class="pillar-card reveal-up" style="transition-delay: 0.1s;">
+                    <div class="pillar-card-image">
+                        <img src="assets/images/IMG_5223.jpg" alt="Financial wellness">
+                        <div class="pillar-card-overlay"></div>
+                        <span class="pillar-card-badge pillar-green">Financial</span>
+                    </div>
+                    <div class="pillar-card-body">
+                        <div class="pillar-accent pillar-accent-green"></div>
+                        <h3>Financial</h3>
+                        <p>Personal economic stability, ability to save, and path to generational wealth.</p>
+                    </div>
                 </div>
-                <div class="pillar-card reveal-up shadow-hover" style="transition-delay: 0.2s;">
-                    <div class="icon red-glow">🧠</div>
-                    <h3>Mental</h3>
-                    <p>Managing mood and challenges while moderating trauma and remaining hopeful.</p>
+                <!-- Mental -->
+                <div class="pillar-card reveal-up" style="transition-delay: 0.2s;">
+                    <div class="pillar-card-image">
+                        <img src="assets/images/Thrive_Event_0-35.jpeg" alt="Mental wellbeing">
+                        <div class="pillar-card-overlay"></div>
+                        <span class="pillar-card-badge pillar-red">Mental</span>
+                    </div>
+                    <div class="pillar-card-body">
+                        <div class="pillar-accent pillar-accent-red"></div>
+                        <h3>Mental</h3>
+                        <p>Managing mood and challenges while moderating trauma and remaining hopeful.</p>
+                    </div>
                 </div>
-                <div class="pillar-card reveal-up shadow-hover" style="transition-delay: 0.3s;">
-                    <div class="icon white-glow">✨</div>
-                    <h3>Spiritual</h3>
-                    <p>Feeling connected to self, others, and all of humanity.</p>
+                <!-- Spiritual -->
+                <div class="pillar-card reveal-up" style="transition-delay: 0.3s;">
+                    <div class="pillar-card-image">
+                        <img src="assets/images/803A9150.jpg" alt="Spiritual connection">
+                        <div class="pillar-card-overlay"></div>
+                        <span class="pillar-card-badge pillar-white">Spiritual</span>
+                    </div>
+                    <div class="pillar-card-body">
+                        <div class="pillar-accent pillar-accent-white"></div>
+                        <h3>Spiritual</h3>
+                        <p>Feeling connected to self, others, and all of humanity.</p>
+                    </div>
                 </div>
-                <div class="pillar-card reveal-up shadow-hover" style="transition-delay: 0.4s;">
-                    <div class="icon green-glow">🤝</div>
-                    <h3>Social</h3>
-                    <p>Having an ecosystem of supportive, positive people and maintaining vital relationships.</p>
+                <!-- Social -->
+                <div class="pillar-card reveal-up" style="transition-delay: 0.4s;">
+                    <div class="pillar-card-image">
+                        <img src="assets/images/TGFTMC.jpg" alt="Social and community">
+                        <div class="pillar-card-overlay"></div>
+                        <span class="pillar-card-badge pillar-green">Social</span>
+                    </div>
+                    <div class="pillar-card-body">
+                        <div class="pillar-accent pillar-accent-green"></div>
+                        <h3>Social</h3>
+                        <p>Having an ecosystem of supportive, positive people and maintaining vital relationships.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -196,12 +277,47 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container text-center">
-            <div class="logo footer-logo">
-                <h2><span class="mali">MALI</span> <span class="center">CENTER</span></h2>
+        <div class="container">
+            <div class="footer-inner">
+                <!-- Logo -->
+                <div class="footer-brand">
+                    <a href="#mission">
+                        <img src="assets/images/MC Logo Files/PNG Files/MALI CENTER LOGO-03.png" alt="The Mali Center" class="logo-img footer-logo-img">
+                    </a>
+                    <p class="footer-tagline">Building generational health and wealth in our communities.</p>
+                </div>
+
+                <!-- Nav links -->
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <h3 class="footer-nav-heading">Quick Links</h3>
+                    <ul>
+                        <li><a href="#mission-vision">Mission</a></li>
+                        <li><a href="#about">Who We Are</a></li>
+                        <li><a href="#principles">Principles</a></li>
+                        <li><a href="#values">Values</a></li>
+                        <li><a href="#pillars">5 Pillars</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+                        <li><a href="https://fitcommchallenge.com/index.html" target="_blank" rel="noopener noreferrer">F.I.T.-COMM Challenge</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Media / Social -->
+                <div class="footer-media">
+                    <h3 class="footer-nav-heading">Media</h3>
+                    <a href="https://www.facebook.com/profile.php?id=61555847968254" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://www.instagram.com/themalicenter/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        <span>Instagram</span>
+                    </a>
+                </div>
             </div>
-            <p>&copy; 2026 The Mali Center. All Rights Reserved.</p>
-            <p>Building generational health and wealth in our communities.</p>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Mali Center. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
