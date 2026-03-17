@@ -34,6 +34,7 @@
                 <li><a href="index.html#pillars">5 Pillars</a></li>
                 <li><a href="partners.html">Partners</a></li>
                 <li><a href="ecosystem.html" class="nav-active">Ecosystem</a></li>
+                <li><a href="media.html">In the News</a></li>
                 <li><a href="https://thefitlabinc.com/" target="_blank" rel="noopener noreferrer">F.I.T. Lab</a></li>
                 <li><a href="https://fitcommchallenge.com/index.html" target="_blank" rel="noopener noreferrer" class="nav-fitcomm">F.I.T.-COMM Challenge</a></li>
             </ul>
@@ -53,95 +54,119 @@
         </div>
     </section>
 
+    <!-- Category Filter -->
+    <div class="eco-filter-section accent-bg">
+        <div class="container">
+            <div class="eco-filter-bar">
+                <button class="eco-filter-btn active" data-filter="all">All</button>
+                <button class="eco-filter-btn" data-filter="fitness">Fitness &amp; Training</button>
+                <button class="eco-filter-btn" data-filter="wellness">Health &amp; Wellness</button>
+                <button class="eco-filter-btn" data-filter="consulting">Business &amp; Consulting</button>
+                <button class="eco-filter-btn" data-filter="community">Community &amp; Nonprofit</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Ecosystem Grid -->
     <section class="section accent-bg">
         <div class="container">
 
             <!-- Ecosystem Members -->
-            <div class="eco-category-section">
+            <div class="eco-category-section" id="eco-section-members">
                 <div class="eco-category-header">
-                    <span class="eco-category-icon">🤝</span>
+                    <span class="eco-category-icon">🤝🏾</span>
                     <h2 class="eco-category-title">Ecosystem Members</h2>
                 </div>
                 <div class="ecosystem-grid">
 
-                    <div class="eco-card reveal-up">
+                    <div class="eco-card reveal-up" data-type="fitness">
                         <div class="eco-card-logo">
                             <img src="assets/images/Ecosystem_&_community_partner_logos_plus_CERT_&_Targeted_Business_logos/chizel_logo%5B1%5D%20%281%29.svg" alt="Chizel, Inc." onerror="this.parentNode.classList.add('eco-card-logo--fallback');this.style.display='none';this.parentNode.innerHTML='<span>Chizel, Inc.</span>'">
                         </div>
                         <div class="eco-card-body">
+                            <span class="eco-type-badge eco-type-fitness">Fitness</span>
                             <h3 class="eco-card-name">Chizel, Inc.</h3>
                             <p class="eco-card-desc">Tyrone Minor has provided professional fitness training for over 25 years — working with high school state champions, Olympians, mothers and everyday professionals. Clients can expect improvements in athletic performance, physical strength, muscular endurance, flexibility, mobility, speed, agility and explosiveness.</p>
                         </div>
                     </div>
 
-                    <div class="eco-card reveal-up">
+                    <div class="eco-card reveal-up" data-type="wellness" style="transition-delay:0.06s">
                         <div class="eco-card-logo">
                             <img src="assets/images/Ecosystem_&_community_partner_logos_plus_CERT_&_Targeted_Business_logos/purpose_logo.jpg" alt="PURPOSE Health &amp; Wellness" onerror="this.parentNode.classList.add('eco-card-logo--fallback');this.style.display='none';this.parentNode.innerHTML='<span>PURPOSE Health &amp; Wellness</span>'">
                         </div>
                         <div class="eco-card-body">
+                            <span class="eco-type-badge eco-type-wellness">Wellness</span>
                             <h3 class="eco-card-name">PURPOSE Health &amp; Wellness</h3>
                             <p class="eco-card-desc">CEO and founder Aneesha Kelly is a proud native of St. Paul's historic Rondo Neighborhood. PURPOSE takes a holistic approach to mental health with extensive trauma training — including DBT, EMDR Therapy, and CISM — to break cycles of generational trauma in individual, group, and family settings.</p>
                         </div>
                     </div>
 
-                    <div class="eco-card reveal-up">
+                    <div class="eco-card reveal-up" data-type="consulting" style="transition-delay:0.09s">
                         <div class="eco-card-logo">
                             <img src="assets/images/Ecosystem_&_community_partner_logos_plus_CERT_&_Targeted_Business_logos/TBWC%20and%20MLI%20Logo%20.png" alt="TB Williams Consulting" onerror="this.parentNode.classList.add('eco-card-logo--fallback');this.style.display='none';this.parentNode.innerHTML='<span>TB Williams Consulting</span>'">
                         </div>
                         <div class="eco-card-body">
+                            <span class="eco-type-badge eco-type-consulting">Consulting</span>
                             <h3 class="eco-card-name">TB Williams Consulting, LLC</h3>
                             <p class="eco-card-desc">Offers a customized suite of services addressing Diversity, Inclusion &amp; Belonging gaps — helping organizations increase employee engagement, diverse talent retention, and build equity and inclusion capacity for teams and their marketplace.</p>
                             <a href="https://tbwilliamsconsulting.com" target="_blank" rel="noopener noreferrer" class="eco-card-link">Visit Website →</a>
                         </div>
                     </div>
 
-                    <div class="eco-card reveal-up">
+                    <div class="eco-card reveal-up" data-type="wellness" style="transition-delay:0.12s">
                         <div class="eco-card-logo">
                             <img src="assets/images/Ecosystem_&_community_partner_logos_plus_CERT_&_Targeted_Business_logos/AR%20Logo%20Updated%20.svg" alt="Kasim Abdur Razzaq" onerror="this.parentNode.classList.add('eco-card-logo--fallback');this.style.display='none';this.parentNode.innerHTML='<span>Kasim Abdur Razzaq</span>'">
                         </div>
                         <div class="eco-card-body">
+                            <span class="eco-type-badge eco-type-wellness">Wellness</span>
                             <h3 class="eco-card-name">Kasim Abdur Razzaq Counseling &amp; Social Architecture</h3>
                             <p class="eco-card-desc">A sought-after speaker, author, and psychotherapist from the historic Rondo neighborhood of St. Paul. Kasim has crafted "Social Architecture" — a unique process to interpersonal engagement that constructs sacred space for people to learn, heal and grow.</p>
                             <a href="https://kasimabdurrazzaq.com" target="_blank" rel="noopener noreferrer" class="eco-card-link">Visit Website →</a>
                         </div>
                     </div>
 
-                    <div class="eco-card reveal-up">
+                    <div class="eco-card reveal-up" data-type="wellness" style="transition-delay:0.15s">
                         <div class="eco-card-logo">
                             <img src="assets/images/Ecosystem_&_community_partner_logos_plus_CERT_&_Targeted_Business_logos/logo_Desir-Holistic-Therapy.png" alt="Desir Holistic Therapy" onerror="this.parentNode.classList.add('eco-card-logo--fallback');this.style.display='none';this.parentNode.innerHTML='<span>Desir Holistic Therapy</span>'">
                         </div>
                         <div class="eco-card-body">
+                            <span class="eco-type-badge eco-type-wellness">Wellness</span>
                             <h3 class="eco-card-name">Desir Holistic Therapy</h3>
                             <p class="eco-card-desc">Bringing the luxury of the spa to you — sports massage, shiatsu, Swedish and specialized care for athletes and expecting mothers. A premier mobile therapy service committed to recovery, relaxation, and holistic healing.</p>
                             <a href="https://expertbodyhealer.com/" target="_blank" rel="noopener noreferrer" class="eco-card-link">Visit Website →</a>
                         </div>
                     </div>
 
-                    <div class="eco-card reveal-up">
-                        <div class="eco-card-logo eco-card-logo--fallback"><span>Glow 808, LLC</span></div>
+                    <div class="eco-card reveal-up" data-type="wellness" style="transition-delay:0.18s">
+                        <div class="eco-card-logo">
+                            <img src="assets/images/Ecosystem_&_community_partner_logos_plus_CERT_&_Targeted_Business_logos/noval_noir_portrait_bw-_OmqKFdp.jpeg" alt="Glow 808, LLC" onerror="this.parentNode.classList.add('eco-card-logo--fallback');this.style.display='none';this.parentNode.innerHTML='<span>Glow 808, LLC</span>'">
+                        </div>
                         <div class="eco-card-body">
+                            <span class="eco-type-badge eco-type-wellness">Wellness</span>
                             <h3 class="eco-card-name">Glow 808, LLC</h3>
-                            <p class="eco-card-desc">A wellness and lifestyle brand committed to helping individuals discover their inner radiance — through self-care, community, and intentional living.</p>
+                            <p class="eco-card-desc">A wellness and lifestyle brand owned by Noval Noir, committed to helping individuals discover their inner radiance — through self-care, community, and intentional living.</p>
+                            <a href="https://novalnoir.com" target="_blank" rel="noopener noreferrer" class="eco-card-link">Visit Website →</a>
                         </div>
                     </div>
 
-                    <div class="eco-card reveal-up">
+                    <div class="eco-card reveal-up" data-type="community" style="transition-delay:0.21s">
                         <div class="eco-card-logo">
                             <img src="assets/images/Ecosystem_&_community_partner_logos_plus_CERT_&_Targeted_Business_logos/CSWM%20LOGO.png" alt="Change Starts With Me" onerror="this.parentNode.classList.add('eco-card-logo--fallback');this.style.display='none';this.parentNode.innerHTML='<span>Change Starts With Me</span>'">
                         </div>
                         <div class="eco-card-body">
+                            <span class="eco-type-badge eco-type-community">Nonprofit</span>
                             <h3 class="eco-card-name">Change Starts With Me (CSWM)</h3>
                             <p class="eco-card-desc">A grassroots movement of personal accountability seeking unity through action. CSWM's mission is to rebuild Twin Cities communities through food security, business grants &amp; mentorship for BIPOC entrepreneurs, and support for underserved youth.</p>
                             <a href="https://changestartswithme.com" target="_blank" rel="noopener noreferrer" class="eco-card-link">Visit Website →</a>
                         </div>
                     </div>
 
-                    <div class="eco-card reveal-up">
+                    <div class="eco-card reveal-up" data-type="community" style="transition-delay:0.24s">
                         <div class="eco-card-logo">
                             <img src="assets/images/Ecosystem_&_community_partner_logos_plus_CERT_&_Targeted_Business_logos/Fairway%20Foundation.png" alt="Fairway Foundation" onerror="this.parentNode.classList.add('eco-card-logo--fallback');this.style.display='none';this.parentNode.innerHTML='<span>Fairway Foundation</span>'">
                         </div>
                         <div class="eco-card-body">
+                            <span class="eco-type-badge eco-type-community">Nonprofit</span>
                             <h3 class="eco-card-name">Fairway Foundation</h3>
                             <p class="eco-card-desc">Providing Twin Cities youth with structured programs focused on education, recreation, cultural enrichment and life skills through the game of golf — instilling honesty, self-reliance, sportsmanship and integrity.</p>
                             <a href="https://fairwayfoundation.org" target="_blank" rel="noopener noreferrer" class="eco-card-link">Visit Website →</a>
@@ -152,7 +177,7 @@
             </div>
 
             <!-- F.I.T. Lab Team -->
-            <div class="eco-category-section eco-fitlab-section">
+            <div class="eco-category-section eco-fitlab-section" id="eco-section-fitlab">
                 <div class="eco-category-header eco-fitlab-header">
                     <div class="eco-fitlab-logo-wrap">
                         <img src="assets/images/Ecosystem_&_community_partner_logos_plus_CERT_&_Targeted_Business_logos/FIT-LAB-LOGO.png" alt="The F.I.T. Lab" class="eco-fitlab-logo">
@@ -163,96 +188,87 @@
                         <p class="eco-fitlab-sub">Independent fitness professionals operating inside The F.I.T. Lab</p>
                     </div>
                 </div>
-                <div class="ecosystem-grid">
+                <div class="fitlab-scroll-track">
+                    <div class="fitlab-scroll-inner">
 
-                    <div class="eco-card eco-card--fitlab reveal-up">
-                        <div class="eco-card-logo">
-                            <img src="assets/images/Ecosystem_&_community_partner_logos_plus_CERT_&_Targeted_Business_logos/StrengthINVertWtagGrey.jpg" alt="StrengthIN, Inc." onerror="this.parentNode.classList.add('eco-card-logo--fallback');this.style.display='none';this.parentNode.innerHTML='<span>StrengthIN, Inc.</span>'">
+                        <div class="fitlab-card" data-type="fitness">
+                            <div class="fitlab-card-logo">
+                                <img src="assets/images/Ecosystem_&_community_partner_logos_plus_CERT_&_Targeted_Business_logos/StrengthINVertWtagGrey.jpg" alt="StrengthIN, Inc." onerror="this.style.display='none'">
+                            </div>
+                            <h3 class="fitlab-card-name">StrengthIN, Inc.</h3>
+                            <p class="fitlab-card-desc">Yoga instruction, personal training, and DEI consulting — maximizing health and building belonging.</p>
                         </div>
-                        <div class="eco-card-body">
-                            <h3 class="eco-card-name">StrengthIN, Inc.</h3>
-                            <p class="eco-card-desc">Jamie Minor utilizes her unique background to help clients maximize health and wellness through individualized yoga instruction and personal training, while helping organizations enhance their DEI acumen to foster a culture of belonging.</p>
+
+                        <div class="fitlab-card" data-type="fitness">
+                            <div class="fitlab-card-logo">
+                                <img src="assets/images/Ecosystem_&_community_partner_logos_plus_CERT_&_Targeted_Business_logos/Gentle%20Strength.png" alt="Gentle Strength" onerror="this.style.display='none'">
+                            </div>
+                            <h3 class="fitlab-card-name">Gentle Strength</h3>
+                            <p class="fitlab-card-desc">Progressive strength training for all abilities — welcoming those who haven't felt at home in traditional fitness spaces.</p>
+                            <a href="https://www.gentlestrength.info" target="_blank" rel="noopener noreferrer" class="fitlab-card-link">Visit →</a>
                         </div>
+
+                        <div class="fitlab-card" data-type="fitness">
+                            <div class="fitlab-card-logo">
+                                <img src="assets/images/Ecosystem_&_community_partner_logos_plus_CERT_&_Targeted_Business_logos/Saint%20Fit%20Logo.png" alt="Saint Fit" onerror="this.style.display='none'">
+                            </div>
+                            <h3 class="fitlab-card-name">Saint Fit</h3>
+                            <p class="fitlab-card-desc">15+ years of personal &amp; group training. Expertise in weight loss, corrective exercise, and post-rehab. Proper preparation prevents poor performance.</p>
+                        </div>
+
+                        <div class="fitlab-card" data-type="fitness">
+                            <div class="fitlab-card-logo">
+                                <img src="assets/images/Ecosystem_&_community_partner_logos_plus_CERT_&_Targeted_Business_logos/Pajemo%20Logo%20Original.svg" alt="PAJEMO Fitness" onerror="this.style.display='none'">
+                            </div>
+                            <h3 class="fitlab-card-name">PAJEMO Fitness</h3>
+                            <p class="fitlab-card-desc">Certified personal trainer and nutrition specialist using an analytical approach to help clients build lasting healthy habits.</p>
+                        </div>
+
+                        <div class="fitlab-card" data-type="fitness">
+                            <div class="fitlab-card-logo">
+                                <img src="assets/images/Ecosystem_&_community_partner_logos_plus_CERT_&_Targeted_Business_logos/MGS.png" alt="M. Gayle Adventures" onerror="this.style.display='none'">
+                            </div>
+                            <h3 class="fitlab-card-name">M. Gayle Adventures</h3>
+                            <p class="fitlab-card-desc">Adventurous, experiential fitness that inspires people to get outdoors and build community through movement.</p>
+                            <a href="https://mgayleoutdooradventures.com/" target="_blank" rel="noopener noreferrer" class="fitlab-card-link">Visit →</a>
+                        </div>
+
+                        <div class="fitlab-card" data-type="fitness">
+                            <div class="fitlab-card-logo">
+                                <img src="assets/images/Ecosystem_&_community_partner_logos_plus_CERT_&_Targeted_Business_logos/Aspire%20Logo%20Final%20.jpg" alt="Aspire Fitness" onerror="this.style.display='none'">
+                            </div>
+                            <h3 class="fitlab-card-name">Aspire Fitness</h3>
+                            <p class="fitlab-card-desc">Women-owned, judgment-free personal training for all ages, abilities and backgrounds. It is never too late to change your life.</p>
+                        </div>
+
+                        <div class="fitlab-card" data-type="fitness">
+                            <div class="fitlab-card-logo">
+                                <img src="assets/images/Ecosystem_&_community_partner_logos_plus_CERT_&_Targeted_Business_logos/WOWLOGO.png" alt="Workout With Whitney" onerror="this.style.display='none'">
+                            </div>
+                            <h3 class="fitlab-card-name">WoWW</h3>
+                            <p class="fitlab-card-desc">"Come as you are, start where you're at." Women-focused strength training — REAL women, REAL life, BEING well.</p>
+                        </div>
+
+                        <div class="fitlab-card" data-type="fitness">
+                            <div class="fitlab-card-logo">
+                                <img src="assets/images/Ecosystem_&_community_partner_logos_plus_CERT_&_Targeted_Business_logos/FierceFitness.jpg" alt="Fierce Fitness" onerror="this.style.display='none'">
+                            </div>
+                            <h3 class="fitlab-card-name">Fierce Fitness</h3>
+                            <p class="fitlab-card-desc">Certified STRONG by Zumba instructor — her own 40 lb. transformation fuels her passion for helping women achieve their goals.</p>
+                        </div>
+
+                        <div class="fitlab-card" data-type="fitness">
+                            <div class="fitlab-card-logo">
+                                <img src="assets/images/Ecosystem_&_community_partner_logos_plus_CERT_&_Targeted_Business_logos/chizel_logo%5B1%5D%20%281%29.svg" alt="Chizel, Inc." onerror="this.style.display='none'">
+                            </div>
+                            <h3 class="fitlab-card-name">Chizel, Inc.</h3>
+                            <p class="fitlab-card-desc">25+ years of elite-level training. Strength, endurance, explosiveness — from Olympians to everyday pros.</p>
+                        </div>
+
                     </div>
-
-                    <div class="eco-card eco-card--fitlab reveal-up">
-                        <div class="eco-card-logo">
-                            <img src="assets/images/Ecosystem_&_community_partner_logos_plus_CERT_&_Targeted_Business_logos/Gentle%20Strength.png" alt="Gentle Strength" onerror="this.parentNode.classList.add('eco-card-logo--fallback');this.style.display='none';this.parentNode.innerHTML='<span>Gentle Strength</span>'">
-                        </div>
-                        <div class="eco-card-body">
-                            <h3 class="eco-card-name">Gentle Strength</h3>
-                            <p class="eco-card-desc">Anne Schwalbe offers progressive, structured strength training programs in small group, one on one or hybrid settings — welcoming all abilities regardless of age, body size, or skill level. Perfect for those who haven't felt welcome in traditional fitness spaces.</p>
-                        </div>
-                    </div>
-
-                    <div class="eco-card eco-card--fitlab reveal-up">
-                        <div class="eco-card-logo">
-                            <img src="assets/images/Ecosystem_&_community_partner_logos_plus_CERT_&_Targeted_Business_logos/Saint%20Fit%20Logo.png" alt="Saint Fit" onerror="this.parentNode.classList.add('eco-card-logo--fallback');this.style.display='none';this.parentNode.innerHTML='<span>Saint Fit</span>'">
-                        </div>
-                        <div class="eco-card-body">
-                            <h3 class="eco-card-name">Saint Fit</h3>
-                            <p class="eco-card-desc">Dru Dalton is an enthusiastic fitness professional with over 15 years of Personal and Group Training experience. Areas of expertise: weight loss, general strength, corrective exercise, and post rehabilitation. Proper preparation prevents poor performance.</p>
-                        </div>
-                    </div>
-
-                    <div class="eco-card eco-card--fitlab reveal-up">
-                        <div class="eco-card-logo">
-                            <img src="assets/images/Ecosystem_&_community_partner_logos_plus_CERT_&_Targeted_Business_logos/Pajemo%20Logo%20Original.svg" alt="PAJEMO Fitness" onerror="this.parentNode.classList.add('eco-card-logo--fallback');this.style.display='none';this.parentNode.innerHTML='<span>PAJEMO Fitness</span>'">
-                        </div>
-                        <div class="eco-card-body">
-                            <h3 class="eco-card-name">PAJEMO Fitness</h3>
-                            <p class="eco-card-desc">Owner Paul Montgomery is a certified Personal Trainer and Fitness Nutrition Specialist with over a decade of experience. Paul uses his analytical background to help clients adopt healthy eating and exercise habits — balance is key.</p>
-                        </div>
-                    </div>
-
-                    <div class="eco-card eco-card--fitlab reveal-up">
-                        <div class="eco-card-logo eco-card-logo--fallback"><span>M. Gayle Adventures</span></div>
-                        <div class="eco-card-body">
-                            <h3 class="eco-card-name">M. Gayle Adventures</h3>
-                            <p class="eco-card-desc">Offering adventurous and experiential fitness experiences that inspire people to get outdoors, challenge themselves, and build community through movement and exploration.</p>
-                        </div>
-                    </div>
-
-                    <div class="eco-card eco-card--fitlab reveal-up">
-                        <div class="eco-card-logo">
-                            <img src="assets/images/Ecosystem_&_community_partner_logos_plus_CERT_&_Targeted_Business_logos/Aspire%20Logo%20Final%20.jpg" alt="Aspire Fitness" onerror="this.parentNode.classList.add('eco-card-logo--fallback');this.style.display='none';this.parentNode.innerHTML='<span>Aspire Fitness</span>'">
-                        </div>
-                        <div class="eco-card-body">
-                            <h3 class="eco-card-name">Aspire Fitness</h3>
-                            <p class="eco-card-desc">Michelle Dalluge, owner of Aspire Fitness — a certified women-owned business — provides strengths-based, judgment-free personal training for all people of all ages, abilities and backgrounds. It is never too late to change your life.</p>
-                        </div>
-                    </div>
-
-                    <div class="eco-card eco-card--fitlab reveal-up">
-                        <div class="eco-card-logo">
-                            <img src="assets/images/Ecosystem_&_community_partner_logos_plus_CERT_&_Targeted_Business_logos/WOWLOGO.png" alt="Workout With Whitney" onerror="this.parentNode.classList.add('eco-card-logo--fallback');this.style.display='none';this.parentNode.innerHTML='<span>WoWW</span>'">
-                        </div>
-                        <div class="eco-card-body">
-                            <h3 class="eco-card-name">Workout With Whitney (WoWW)</h3>
-                            <p class="eco-card-desc">Whitney Cantrell is a heart-centered trainer offering women-focused strength training classes and one-on-one personal training. "Come as you are, start where you're at." REAL women, REAL life, BEING well.</p>
-                        </div>
-                    </div>
-
-                    <div class="eco-card eco-card--fitlab reveal-up">
-                        <div class="eco-card-logo eco-card-logo--fallback"><span>Fierce Fitness</span></div>
-                        <div class="eco-card-body">
-                            <h3 class="eco-card-name">Fierce Fitness</h3>
-                            <p class="eco-card-desc">Shamarah is a certified STRONG by Zumba and Group Exercise instructor. Her passion for helping women achieve fitness goals comes from her own journey — losing over 40 lbs. and overcoming high blood pressure. "The struggle you are in today is developing the strength you need for tomorrow."</p>
-                        </div>
-                    </div>
-
-                    <div class="eco-card eco-card--fitlab reveal-up">
-                        <div class="eco-card-logo">
-                            <img src="assets/images/Ecosystem_&_community_partner_logos_plus_CERT_&_Targeted_Business_logos/chizel_logo%5B1%5D%20%281%29.svg" alt="Chizel, Inc." onerror="this.parentNode.classList.add('eco-card-logo--fallback');this.style.display='none';this.parentNode.innerHTML='<span>Chizel, Inc.</span>'">
-                        </div>
-                        <div class="eco-card-body">
-                            <h3 class="eco-card-name">Chizel, Inc.</h3>
-                            <p class="eco-card-desc">Tyrone Minor has provided professional fitness training for over 25 years — working with high school state champions, Olympians, mothers and everyday professionals. Clients can expect improvements in athletic performance, strength, endurance, flexibility, and explosiveness.</p>
-                        </div>
-                    </div>
-
                 </div>
-            </div>
+                <p class="fitlab-scroll-hint">← scroll to explore →</p>
+                </div>
 
         </div>
     </section>
@@ -275,6 +291,7 @@
                         <li><a href="index.html#pillars">5 Pillars</a></li>
                         <li><a href="partners.html">Partners</a></li>
                         <li><a href="ecosystem.html">Ecosystem</a></li>
+                        <li><a href="media.html">In the News</a></li>
                         <li><a href="https://fitcommchallenge.com/index.html" target="_blank" rel="noopener noreferrer">F.I.T.-COMM Challenge</a></li>
                     </ul>
                 </nav>
@@ -301,6 +318,64 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Ecosystem category filter
+        (function() {
+            var filterBtns = document.querySelectorAll('.eco-filter-btn');
+            var ecoCards = document.querySelectorAll('.eco-card[data-type]');
+            var fitlabCards = document.querySelectorAll('.fitlab-card[data-type]');
+            var membersSection = document.getElementById('eco-section-members');
+            var fitlabSection = document.getElementById('eco-section-fitlab');
+
+            filterBtns.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    filterBtns.forEach(function(b) { b.classList.remove('active'); });
+                    btn.classList.add('active');
+                    var filter = btn.getAttribute('data-filter');
+
+                    ecoCards.forEach(function(card) {
+                        card.style.display = (filter === 'all' || card.getAttribute('data-type') === filter) ? '' : 'none';
+                    });
+
+                    fitlabCards.forEach(function(card) {
+                        card.style.display = (filter === 'all' || card.getAttribute('data-type') === filter) ? '' : 'none';
+                    });
+
+                    if (filter !== 'all') {
+                        var visibleInMembers = membersSection.querySelectorAll('.eco-card[data-type="' + filter + '"]').length > 0;
+                        var visibleInFitlab = fitlabSection.querySelectorAll('.fitlab-card[data-type="' + filter + '"]').length > 0;
+                        membersSection.style.display = visibleInMembers ? '' : 'none';
+                        fitlabSection.style.display = visibleInFitlab ? '' : 'none';
+                    } else {
+                        membersSection.style.display = '';
+                        fitlabSection.style.display = '';
+                    }
+                });
+            });
+        })();
+
+        // Drag-to-scroll for F.I.T. Lab carousel
+        (function() {
+            var track = document.querySelector('.fitlab-scroll-track');
+            if (!track) return;
+            var isDown = false, startX, scrollLeft;
+            track.addEventListener('mousedown', function(e) {
+                isDown = true;
+                track.classList.add('active');
+                startX = e.pageX - track.offsetLeft;
+                scrollLeft = track.scrollLeft;
+            });
+            track.addEventListener('mouseleave', function() { isDown = false; track.classList.remove('active'); });
+            track.addEventListener('mouseup', function() { isDown = false; track.classList.remove('active'); });
+            track.addEventListener('mousemove', function(e) {
+                if (!isDown) return;
+                e.preventDefault();
+                var x = e.pageX - track.offsetLeft;
+                var walk = (x - startX) * 1.5;
+                track.scrollLeft = scrollLeft - walk;
+            });
+        })();
+    </script>
 </body>
 
 </html>

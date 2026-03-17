@@ -916,6 +916,381 @@ ul.principles-list li {
     border-color: rgba(0, 166, 63, 0.35);
 }
 
+/* ===== ECOSYSTEM BENTO GRID ===== */
+.eco-category-sub {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.35);
+    font-style: italic;
+    margin: 0 0 0 auto;
+    align-self: center;
+}
+
+.eco-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 260px;
+    gap: 1rem;
+}
+
+.eco-bento-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #161616;
+    border: 1px solid rgba(255,255,255,0.06);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.eco-bento-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.6);
+}
+
+.eco-bento-card--wide {
+    grid-column: span 2;
+}
+
+/* Front face */
+.eco-bento-face {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.75rem 1.25rem 1.25rem;
+    gap: 0.6rem;
+    transition: opacity 0.3s ease;
+}
+
+.eco-bento-card:hover .eco-bento-face {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.eco-bento-logo-wrap {
+    width: 130px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.eco-bento-logo-wrap img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.eco-bento-logo-wrap--portrait {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.eco-bento-logo-wrap--portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.eco-bento-name {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.85);
+    text-align: center;
+    line-height: 1.3;
+}
+
+/* Hover reveal back */
+.eco-bento-back {
+    position: absolute;
+    inset: 0;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.4rem;
+    transform: translateY(100%);
+    transition: transform 0.38s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.eco-bento-card:hover .eco-bento-back {
+    transform: translateY(0);
+}
+
+.eco-bento-back--fitness {
+    background: linear-gradient(155deg, #6b0007 0%, #c8001a 100%);
+}
+
+.eco-bento-back--wellness {
+    background: linear-gradient(155deg, #004a1a 0%, #007a30 100%);
+}
+
+.eco-bento-back--consulting {
+    background: linear-gradient(155deg, #0d2a47 0%, #1a5a8a 100%);
+}
+
+.eco-bento-back--community {
+    background: linear-gradient(155deg, #4a2e00 0%, #9a6200 100%);
+}
+
+.eco-bento-back-name {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.25;
+    margin: 0.2rem 0 0.3rem;
+}
+
+.eco-bento-back-desc {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.88);
+    line-height: 1.6;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex: 1;
+}
+
+.eco-bento-back-link {
+    display: inline-block;
+    color: rgba(255,255,255,0.95);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+    padding-bottom: 2px;
+    align-self: flex-start;
+    margin-top: 0.3rem;
+    transition: border-color 0.2s;
+}
+
+.eco-bento-back-link:hover {
+    border-color: rgba(255,255,255,0.9);
+}
+
+/* Full-width featured card */
+.eco-bento-card--featured {
+    grid-column: span 3;
+    grid-row: auto;
+    height: 160px;
+}
+
+.eco-bento-featured-inner {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    height: 100%;
+    padding: 1.5rem 2rem;
+}
+
+.eco-bento-featured-logo {
+    width: 120px;
+    height: 80px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eco-bento-featured-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.eco-bento-featured-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.eco-bento-featured-name {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0.2rem 0;
+}
+
+.eco-bento-featured-desc {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.55;
+    margin: 0;
+    max-width: 680px;
+}
+
+/* ===== F.I.T. LAB HORIZONTAL SCROLL ===== */
+.fitlab-scroll-track {
+    overflow-x: auto;
+    overflow-y: visible;
+    padding-bottom: 1.25rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0,166,63,0.4) rgba(255,255,255,0.05);
+    cursor: grab;
+}
+
+.fitlab-scroll-track:active {
+    cursor: grabbing;
+}
+
+.fitlab-scroll-track::-webkit-scrollbar {
+    height: 4px;
+}
+
+.fitlab-scroll-track::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.05);
+    border-radius: 2px;
+}
+
+.fitlab-scroll-track::-webkit-scrollbar-thumb {
+    background: rgba(0,166,63,0.4);
+    border-radius: 2px;
+}
+
+.fitlab-scroll-inner {
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem 0 0.5rem;
+    width: max-content;
+}
+
+.fitlab-card {
+    width: 220px;
+    flex-shrink: 0;
+    background: #0f1f10;
+    border: 1px solid rgba(0,166,63,0.18);
+    border-radius: 18px;
+    padding: 1.5rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.fitlab-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0,166,63,0.45);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+}
+
+.fitlab-card-logo {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.fitlab-card-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.fitlab-card-name {
+    font-size: 0.88rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0;
+    line-height: 1.25;
+}
+
+.fitlab-card-desc {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.6;
+    margin: 0;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.fitlab-card-link {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--clr-green);
+    text-decoration: none;
+    margin-top: auto;
+    padding-top: 0.25rem;
+    transition: letter-spacing 0.2s ease;
+}
+
+.fitlab-card-link:hover {
+    letter-spacing: 0.14em;
+}
+
+/* Drag-to-scroll indicator */
+.fitlab-scroll-hint {
+    text-align: right;
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.25);
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* Responsive bento */
+@media (max-width: 900px) {
+    .eco-bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 230px;
+    }
+    .eco-bento-card--wide {
+        grid-column: span 2;
+    }
+    .eco-bento-card--featured {
+        grid-column: span 2;
+        height: auto;
+    }
+    .eco-bento-featured-inner {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.25rem;
+        height: auto;
+    }
+}
+
+@media (max-width: 580px) {
+    .eco-bento-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 200px;
+        gap: 0.65rem;
+    }
+    .eco-bento-card--wide,
+    .eco-bento-card--featured {
+        grid-column: span 2;
+    }
+    .eco-bento-back {
+        padding: 1rem;
+    }
+    .eco-bento-back-name {
+        font-size: 0.85rem;
+    }
+    .eco-bento-back-desc {
+        font-size: 0.72rem;
+        -webkit-line-clamp: 4;
+    }
+    .eco-bento-card:hover .eco-bento-face {
+        opacity: 0;
+    }
+}
+
 /* Ecosystem filter bar */
 .eco-filter-section {
     padding: 2.5rem 0 0;
@@ -1020,6 +1395,42 @@ ul.principles-list li {
     background: rgba(255, 255, 255, 0.08);
     color: rgba(255, 255, 255, 0.75);
     border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Ecosystem type badges (for filter) */
+.eco-type-badge {
+    display: inline-block;
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.2em 0.65em;
+    border-radius: 99px;
+    margin-bottom: 0.5rem;
+}
+
+.eco-type-fitness {
+    background: rgba(227, 0, 15, 0.15);
+    color: #ff6b6b;
+    border: 1px solid rgba(227, 0, 15, 0.3);
+}
+
+.eco-type-wellness {
+    background: rgba(0, 166, 63, 0.15);
+    color: var(--clr-green);
+    border: 1px solid rgba(0, 166, 63, 0.3);
+}
+
+.eco-type-consulting {
+    background: rgba(100, 160, 230, 0.15);
+    color: #7ab8f5;
+    border: 1px solid rgba(100, 160, 230, 0.3);
+}
+
+.eco-type-community {
+    background: rgba(200, 145, 30, 0.15);
+    color: #f0b429;
+    border: 1px solid rgba(200, 145, 30, 0.3);
 }
 
 .eco-cat-tag--green {
@@ -1257,6 +1668,444 @@ ul.principles-list li {
 .nav-fitcomm:hover {
     background: var(--clr-green);
     color: #000 !important;
+}
+
+/* News / Media Page */
+/* ===== MEDIA PAGE — EDITORIAL LAYOUT ===== */
+
+/* Hero Section */
+.news-hero-section {
+    position: relative;
+    height: 80vh;
+    min-height: 480px;
+    max-height: 700px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    margin-top: 80px;
+}
+
+.news-hero-bg {
+    position: absolute;
+    inset: 0;
+}
+
+.news-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.news-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.2) 100%);
+}
+
+.news-hero-content {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 3.5rem;
+    max-width: 820px;
+}
+
+.news-hero-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.news-hero-pub-pill {
+    background: var(--clr-red);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0.3em 0.85em;
+    border-radius: 99px;
+}
+
+.news-hero-dot {
+    color: rgba(255,255,255,0.4);
+    font-size: 0.8rem;
+}
+
+.news-hero-datestamp {
+    color: rgba(255,255,255,0.55);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.news-hero-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.25;
+    margin: 0 0 1.5rem;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+}
+
+.news-hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 0.7em 1.4em;
+    border-radius: 99px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    backdrop-filter: blur(6px);
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.news-hero-cta:hover {
+    background: rgba(255,255,255,0.22);
+    border-color: rgba(255,255,255,0.5);
+}
+
+/* Press Ticker */
+.press-ticker-wrap {
+    background: var(--clr-red);
+    overflow: hidden;
+    padding: 0.7rem 0;
+    white-space: nowrap;
+}
+
+.press-ticker {
+    display: inline-block;
+    animation: tickerScroll 28s linear infinite;
+}
+
+.press-ticker span {
+    display: inline-block;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0 1.2rem;
+}
+
+.press-ticker-sep {
+    color: rgba(255,255,255,0.5) !important;
+    font-size: 0.6rem !important;
+}
+
+@keyframes tickerScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Section Divider Labels */
+.news-featured-section {
+    padding-top: 3.5rem;
+    padding-bottom: 3rem;
+}
+
+.news-list-section {
+    background: #0d0d0d;
+    padding: 3rem 0 5rem;
+}
+
+.news-section-label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.news-section-rule {
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.12);
+}
+
+.news-section-text {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: rgba(255,255,255,0.4);
+    white-space: nowrap;
+}
+
+/* Featured 3-up Cards */
+.news-featured-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.news-feat-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 14px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-feat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+.news-feat-img {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.news-feat-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news-feat-card:hover .news-feat-img img {
+    transform: scale(1.06);
+}
+
+.news-feat-pub-badge {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.3em 0.7em;
+    border-radius: 6px;
+    backdrop-filter: blur(4px);
+}
+
+.news-feat-body {
+    padding: 1.25rem 1.4rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0.4rem;
+}
+
+.news-feat-date {
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--clr-red);
+}
+
+.news-feat-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.4;
+    flex: 1;
+    margin: 0;
+}
+
+.news-feat-cta {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--clr-green);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-top: 0.5rem;
+    transition: letter-spacing 0.2s ease;
+}
+
+.news-feat-card:hover .news-feat-cta {
+    letter-spacing: 0.13em;
+}
+
+/* News List — Newspaper row style */
+.news-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-list-item {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.2s ease;
+}
+
+.news-list-item:first-child {
+    border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+.news-list-item:hover {
+    background: rgba(255,255,255,0.03);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin: 0 -0.5rem;
+    border-radius: 8px;
+}
+
+.news-list-thumb {
+    width: 90px;
+    height: 64px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.news-list-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.news-list-item:hover .news-list-thumb img {
+    transform: scale(1.08);
+}
+
+.news-list-thumb--video .news-list-play {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.news-list-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.news-list-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-bottom: 0.35rem;
+}
+
+.news-list-pub {
+    font-size: 0.62rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--clr-red);
+}
+
+.news-list-sep {
+    color: rgba(255,255,255,0.25);
+    font-size: 0.7rem;
+}
+
+.news-list-date {
+    font-size: 0.62rem;
+    color: rgba(255,255,255,0.35);
+    font-weight: 500;
+}
+
+.news-list-type-tag {
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.45);
+    font-size: 0.58rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.15em 0.55em;
+    border-radius: 4px;
+}
+
+.news-list-headline {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.88);
+    line-height: 1.4;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.news-list-item:hover .news-list-headline {
+    color: #fff;
+}
+
+.news-list-arrow {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.2);
+    flex-shrink: 0;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.news-list-item:hover .news-list-arrow {
+    color: var(--clr-green);
+    transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .news-featured-row {
+        grid-template-columns: 1fr 1fr;
+    }
+    .news-featured-row .news-feat-card:last-child {
+        grid-column: 1 / -1;
+        flex-direction: row;
+    }
+    .news-featured-row .news-feat-card:last-child .news-feat-img {
+        width: 280px;
+        height: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .news-hero-section {
+        height: 60vh;
+        margin-top: 72px;
+    }
+    .news-featured-row {
+        grid-template-columns: 1fr;
+    }
+    .news-featured-row .news-feat-card:last-child {
+        flex-direction: column;
+    }
+    .news-featured-row .news-feat-card:last-child .news-feat-img {
+        width: 100%;
+        height: 200px;
+    }
+    .news-list-headline {
+        white-space: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .news-list-thumb {
+        width: 68px;
+        height: 52px;
+    }
 }
 
 /* Ecosystem Intro Section */
