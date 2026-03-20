@@ -179,6 +179,10 @@ p {
     letter-spacing: 0.1em;
 }
 
+.logo {
+    padding-right: 2.5rem;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -2198,7 +2202,7 @@ ul.principles-list li {
     height: 82px;
     width: auto;
     display: block;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.2rem;
 }
 
 .footer-logo {
