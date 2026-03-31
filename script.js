@@ -1,9 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // iOS: ensure hero video plays (autoplay can be blocked until we call play())
+    // iOS: force hero video to play — muted must be set as a JS property too
     const heroVideo = document.querySelector('.hero-video');
     if (heroVideo) {
-        heroVideo.play().catch(() => {});
+        heroVideo.muted = true;
+        heroVideo.setAttribute('muted', '');
+        heroVideo.setAttribute('playsinline', '');
+
+        const tryPlay = () => {
+            heroVideo.play().catch(() => {});
+        };
+
+        // Attempt immediately in case the video is already ready
+        tryPlay();
+
+        // Retry once metadata is known (iOS often needs this second attempt)
+        heroVideo.addEventListener('loadedmetadata', tryPlay, { once: true });
+
+        // Retry once enough data is buffered to start playback
+        heroVideo.addEventListener('canplaythrough', tryPlay, { once: true });
+
+        // Last-resort: try on the first user touch (iOS can block autoplay entirely
+        // until a gesture occurs, falling back gracefully to the poster image)
+        document.addEventListener('touchstart', tryPlay, { once: true, passive: true });
     }
 
     // Mobile nav toggle
