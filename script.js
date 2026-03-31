@@ -1,37 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // iOS hero video — muted property + playsinline must be set in JS, not just HTML
-    const heroVideo = document.querySelector('.hero-video');
-    if (heroVideo) {
-        heroVideo.muted = true;
-        heroVideo.setAttribute('muted', '');
-        heroVideo.setAttribute('playsinline', '');
-
-        const tryPlay = () => {
-            const promise = heroVideo.play();
-            if (promise !== undefined) {
-                promise.catch(() => {
-                    // Autoplay blocked by browser — hide the video element so the
-                    // hero background-image (poster) shows cleanly with no play button
-                    heroVideo.style.display = 'none';
-                });
-            }
-        };
-
-        // Multiple attempts: immediately, on first data, and once buffered enough
-        tryPlay();
-        heroVideo.addEventListener('loadeddata', tryPlay, { once: true });
-        heroVideo.addEventListener('canplay', tryPlay, { once: true });
-
-        // On first touch anywhere, restore the video and try again — covers
-        // iOS Low Power Mode and strict autoplay policies
-        document.addEventListener('touchstart', () => {
-            heroVideo.style.display = '';
-            heroVideo.muted = true;
-            tryPlay();
-        }, { once: true, passive: true });
-    }
-
     // Mobile nav toggle
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
