@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // iOS: force hero video to play — muted must be set as a JS property too
+    // iOS hero video — muted property + playsinline must be set in JS, not just HTML
     const heroVideo = document.querySelector('.hero-video');
     if (heroVideo) {
         heroVideo.muted = true;
@@ -8,21 +8,28 @@ document.addEventListener('DOMContentLoaded', () => {
         heroVideo.setAttribute('playsinline', '');
 
         const tryPlay = () => {
-            heroVideo.play().catch(() => {});
+            const promise = heroVideo.play();
+            if (promise !== undefined) {
+                promise.catch(() => {
+                    // Autoplay blocked by browser — hide the video element so the
+                    // hero background-image (poster) shows cleanly with no play button
+                    heroVideo.style.display = 'none';
+                });
+            }
         };
 
-        // Attempt immediately in case the video is already ready
+        // Multiple attempts: immediately, on first data, and once buffered enough
         tryPlay();
+        heroVideo.addEventListener('loadeddata', tryPlay, { once: true });
+        heroVideo.addEventListener('canplay', tryPlay, { once: true });
 
-        // Retry once metadata is known (iOS often needs this second attempt)
-        heroVideo.addEventListener('loadedmetadata', tryPlay, { once: true });
-
-        // Retry once enough data is buffered to start playback
-        heroVideo.addEventListener('canplaythrough', tryPlay, { once: true });
-
-        // Last-resort: try on the first user touch (iOS can block autoplay entirely
-        // until a gesture occurs, falling back gracefully to the poster image)
-        document.addEventListener('touchstart', tryPlay, { once: true, passive: true });
+        // On first touch anywhere, restore the video and try again — covers
+        // iOS Low Power Mode and strict autoplay policies
+        document.addEventListener('touchstart', () => {
+            heroVideo.style.display = '';
+            heroVideo.muted = true;
+            tryPlay();
+        }, { once: true, passive: true });
     }
 
     // Mobile nav toggle

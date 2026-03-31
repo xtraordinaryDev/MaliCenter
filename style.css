@@ -247,6 +247,16 @@ p {
     }
 }
 
+/* Suppress the native iOS play-button overlay so our poster shows cleanly */
+.hero-video::-webkit-media-controls,
+.hero-video::-webkit-media-controls-panel,
+.hero-video::-webkit-media-controls-start-playback-button,
+.hero-video::-webkit-media-controls-play-button {
+    display: none !important;
+    -webkit-appearance: none;
+    opacity: 0 !important;
+}
+
 .hero-overlay {
     position: absolute;
     top: 0;
