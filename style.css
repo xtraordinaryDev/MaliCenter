@@ -2246,6 +2246,33 @@ ul.principles-list li {
     opacity: 1;
 }
 
+.footer-contact {
+    margin-top: 1.5rem;
+}
+
+.footer-contact address {
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.footer-contact address p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.footer-contact address a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-contact address a:hover {
+    color: var(--clr-green);
+}
+
 .footer-nav-heading {
     font-size: 0.75rem;
     font-weight: 700;
