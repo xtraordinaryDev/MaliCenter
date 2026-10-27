@@ -1832,10 +1832,10 @@ ul.principles-list li {
     white-space: nowrap;
 }
 
-/* Featured 3-up Cards */
+/* Featured 2×2 Cards */
 .news-featured-row {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 }
 
@@ -2066,14 +2066,6 @@ ul.principles-list li {
     .news-featured-row {
         grid-template-columns: 1fr 1fr;
     }
-    .news-featured-row .news-feat-card:last-child {
-        grid-column: 1 / -1;
-        flex-direction: row;
-    }
-    .news-featured-row .news-feat-card:last-child .news-feat-img {
-        width: 280px;
-        height: auto;
-    }
 }
 
 @media (max-width: 640px) {
@@ -2083,13 +2075,6 @@ ul.principles-list li {
     }
     .news-featured-row {
         grid-template-columns: 1fr;
-    }
-    .news-featured-row .news-feat-card:last-child {
-        flex-direction: column;
-    }
-    .news-featured-row .news-feat-card:last-child .news-feat-img {
-        width: 100%;
-        height: 200px;
     }
     .news-list-headline {
         white-space: normal;
